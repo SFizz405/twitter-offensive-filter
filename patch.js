@@ -11,7 +11,7 @@
                 this.onreadystatechange = function () {
                     if (this.readyState === 4 && /^https:\/\/twitter\.com\/i\/api\/graphql\//.test(this.responseURL)) {
                         const response = JSON.parse(this.response, (key, value) => {
-                            return ["full_text", "name", "text"].includes(key) ? "🚫" : value;
+                            return ["full_text", "name", "text"].includes(key) ? "たいすけ" : value;
                         });
 
                         Object.defineProperty(this, "response", { value: JSON.stringify(response) });
