@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Twitter Offensive Filter",
+    "version": "0.1.0",
+    "description": "Filters offensive tweets",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "run_at": "document_start",
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "matches": [
+                "https://twitter.com/*"
+            ],
+            "resources": [
+                "patch.js"
+            ]
+        }
+    ]
+}
