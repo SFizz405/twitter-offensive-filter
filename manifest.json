@@ -3,6 +3,14 @@
     "name": "Twitter Offensive Filter",
     "version": "0.1.0",
     "description": "Filters offensive tweets",
+    "externally_connectable": {
+        "matches": [
+            "https://twitter.com/*"
+        ]
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
     "content_scripts": [
         {
             "matches": [
